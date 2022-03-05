@@ -25,6 +25,8 @@ const dataProvider = new Courses(courses);
 const dataProcessor = new College(dataProvider, courseData);
 const formHandler = new FormHandler("courses-form", "alert");
 
+
+
 formHandler.addHandler(course => {
     const message = dataProcessor.addCourse(course);
     if (typeof message === 'string') return message;
